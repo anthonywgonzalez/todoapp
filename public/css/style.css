@@ -1,0 +1,68 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+li{
+  list-style: none;
+}
+
+/******************************************
+/* BASESTYLE
+/*******************************************/
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+
+.container{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 25px;
+  align-items: center;
+  background-color:#E9ECEF;
+  border-radius: 1.5rem;
+  box-shadow: -5px 10px 25px rgba(52, 58, 64, 0.5);
+}
+
+.fa{
+  font-size: .5rem;
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.completedTick{
+  margin: 0 10px;
+}
+
+h1{
+  color: #FFF1E6;
+  text-shadow: -2px 2px 3px rgba(52, 58, 64, 0.5);
+}
+
+.completed{
+  text-decoration: line-through;
+}
+
+
+
+

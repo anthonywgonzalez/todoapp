@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Simple ToDo</title>
+
+		<!-- external CSS link -->
+		<script src="https://kit.fontawesome.com/69db602fb1.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<main class="container">
+
+			<h1>Simple ToDo</h1>
+
+				<ul class="todoList">
+
+					<li class="todoItem">
+
+				 	<span>sample text</span>
+
+				 	<input class="completedTick" type="checkbox">
+				 	<span class="fas fa-dumpster-fire"></span>	
+
+					</li>
+
+				</ul>
+
+			<form action="/addTodo" method="POST">
+				<input type="text" placeholder="What To Do?" name="todoInput">
+				<input type="submit">
+			</form>
+
+		</main>
+		    
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
