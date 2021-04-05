@@ -54,10 +54,11 @@ async function unComplete(){
 
 }
 
-async function deleteItem(){
-    const todoInput = this.parentNode.childNodes[1].innerText
+async function deleteItem(event){
+    const dltBtn = event.target
+    const todoInput = dltBtn.previousElementSibling.previousElementSibling.innerText
     try{
-        const res = await fetch('deleteItem', {
+        const res = await fetch('deleteItem',{
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

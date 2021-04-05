@@ -30,14 +30,6 @@ MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
         res.render('index.ejs', { todoItem: todoItems})
         })
 
-        app.post('/addTodo', (req, res) => {
-            db.collection('todos').insertOne({todoInput: req.body.todoInput, completed: false})
-            .then(res => {
-                console.log('Todo Added')
-            })
-            .catch(error => console.error(error))
-        })
-
 
         app.put('/markDone', (req, res) => {
             db.collection('todos').updateOne({todoInput: req.body.todoInput},{
@@ -70,6 +62,14 @@ MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
             })
             .catch(error => console.error(error))
         
+        })
+
+        app.post('/addTodo', (req, res) => {
+            db.collection('todos').insertOne({todoInput: req.body.todoInput, completed: false})
+            .then(res => {
+                console.log('Todo Added')
+            })
+            .catch(error => console.error(error))
         })
 
         app.delete('/deleteItem', (req, res) => {
